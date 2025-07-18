@@ -1,19 +1,16 @@
-#include <iostream>
+#include "Manager.h"
 #include "Dog.h"
 #include "Cat.h"
+#include "Zoo_UI.h"
+#include <memory>
 
 using namespace std;
 
 int main(int argc, char const *argv[])
 {
-    Dog doggie("skull", 6);
-    doggie.play();
-    doggie.printInfo();
-    cout << "#######################" << endl;
+    shared_ptr<Manager> alkhaol = make_shared<Manager>("steve");
+    ZooUI ui(alkhaol);
+    ui.start();
 
-    Cat kitty("neno", 4);
-    kitty.feed();
-    kitty.makeSound();
-    kitty.printInfo();
     return 0;
 }

@@ -23,7 +23,12 @@ void Animal::printInfo()
     cout << "hunger level: " << this->hungerLevel << endl;
 }
 
+string Animal::getSimpleInfo()
+{
+    string result = "{ " + this->type + " ... " + this->name + " ... " + to_string(this->hungerLevel) + " }";
+    return result;
+}
+
 Animal::~Animal()
 {
-
 }

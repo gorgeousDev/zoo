@@ -19,6 +19,7 @@ public:
     virtual void feed();
     virtual void play();
     virtual void printInfo();
+    virtual string getSimpleInfo();
 
     virtual ~Animal();
 };
